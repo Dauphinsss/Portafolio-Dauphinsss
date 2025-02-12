@@ -21,25 +21,27 @@ export default function Home() {
     { id: 14, content: "Railway" },
   ];
   return (
-    <div className="grid justify-items-center p-8 space-y-2 gap-4">
-      <Header />
-      <h1 className="text-center desktop-content">
-        Holaaaaa!!! Yo soy Marcos Velasquez Vela, Diseñador & Desarrollador Web trayendote la Pagina Web donde tus
-      </h1>
-      <h1 className="text-center mobile-content">
-        Hola, yo soy Marcos Velasquez<br></br>Diseñador & Desarrollador
-        Web <br />
-        Trayendote la Pagina Web donde tus
-      </h1>
-      <MagicText />
-      <p className="desktop-content">
-        ¿Alguna vez quisiste tu propia Pagina Web? pues ahora es tu oportunidad, yo
-        diseño y desarrrollo paginas web accesibles e innovadoras, pasando de tu
-        imaginacion a lo que sera tu sitio web.
-      </p>
-      <AnimatedText />
-  
+    <>
+      <div className="grid justify-items-center p-8 space-y-2 gap-4">
+        <Header />
+        <h1 className="text-center desktop-content">
+          Holaaaaa!!! Yo soy Marcos Velasquez Vela, Diseñador & Desarrollador
+          Web trayendote la Pagina Web donde tus
+        </h1>
+        <h1 className="text-center mobile-content">
+          Hola, yo soy Marcos Velasquez<br></br>Diseñador & Desarrollador Web{" "}
+          <br />
+          Trayendote la Pagina Web donde tus
+        </h1>
+        <MagicText />
+        <p className="desktop-content">
+          ¿Alguna vez quisiste tu propia Pagina Web? pues ahora es tu
+          oportunidad, yo diseño y desarrrollo paginas web accesibles e
+          innovadoras, pasando de tu imaginacion a lo que sera tu sitio web.
+        </p>
+        <AnimatedText />
+      </div>
       <InfiniteCarousel items={carouselItems} />
-    </div>
+    </>
   );
 }
