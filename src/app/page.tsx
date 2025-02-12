@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Header from "./components/Header";
 import InfiniteCarousel from "./components/InfiniteCarousel";
 import MagicText from "./components/MagicText";
@@ -22,17 +23,17 @@ export default function Home() {
   ];
   return (
     <>
-      <div className="grid justify-items-center p-8 space-y-2 gap-4">
-        <Header />
-        <h1 className="text-center desktop-content">
-          Holaaaaa!!! Yo soy Marcos Velasquez Vela, Diseñador & Desarrollador
-          Web trayendote la Pagina Web donde tus
-        </h1>
-        <h1 className="text-center mobile-content">
-          Hola, yo soy Marcos Velasquez<br></br>Diseñador & Desarrollador Web{" "}
-          <br />
-          Trayendote la Pagina Web donde tus
-        </h1>
+      <Header />
+      <h1 className="text-center mobile-content mb-4">
+        Holaaa! Yo soy Marcos Velasquez Vela<br></br>Diseñador & Desarrollador
+        Web <br />
+        Trayendote la Pagina Web donde tus
+      </h1>
+      <h1 className="text-center desktop-content">
+        Holaaaaa!!! Yo soy Marcos Velasquez Vela, Diseñador & Desarrollador Web
+        trayendote la Pagina Web donde tus:
+      </h1>
+      <div className="grid justify-items-center sm:p-8 space-y-2 gap-4">
         <MagicText />
         <p className="desktop-content">
           ¿Alguna vez quisiste tu propia Pagina Web? pues ahora es tu
@@ -40,6 +41,9 @@ export default function Home() {
           innovadoras, pasando de tu imaginacion a lo que sera tu sitio web.
         </p>
         <AnimatedText />
+        <Button variant="link" className="text-base p-8">
+          Contáctame
+        </Button>
       </div>
       <InfiniteCarousel items={carouselItems} />
     </>

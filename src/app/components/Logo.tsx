@@ -42,14 +42,22 @@ const Logo: React.FC = () => {
     });
   }, []);
   return (
-    <div className="flex items-center space-x-3 logo-text">
-      <p className="text-2xl font-bold">Dauphinsss Dev</p>
+    <div className="flex items-center space-x-3 logo-text p-4">
+      <p className="text-2xl font-bold desktop-content">Dauphinsss Dev</p>
+      <p className=" font-bold text-xl mobile-content">Dauphinsss Dev</p>
       <Image
         src="/duck.svg"
         alt="Duck logo"
         width={35}
         height={35}
-        className="duck"
+        className="duck desktop-content"
+      />
+      <Image
+        src="/duck.svg"
+        alt="Duck logo"
+        width={25}
+        height={25}
+        className="duck mobile-content"
       />
     </div>
   );

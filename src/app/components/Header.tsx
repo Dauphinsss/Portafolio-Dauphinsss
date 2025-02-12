@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <header className="flex justify-between w-full" >
       <Logo />
-      <Button variant="link" className="text-base">Contáctame</Button>
+      <Button variant="link" className="text-base p-8 desktop-content">Contáctame</Button>
     </header>
   );
 };
