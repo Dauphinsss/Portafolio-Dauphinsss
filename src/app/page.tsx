@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import InfiniteCarousel from "./components/InfiniteCarousel";
 import MagicText from "./components/MagicText";
 import AnimatedText from "./components/Text";
+import Contador from "./components/Contador";
 
 export default function Home() {
   const carouselItems = [
@@ -41,6 +42,11 @@ export default function Home() {
           innovadoras, pasando de tu imaginacion a lo que sera tu sitio web.
         </p>
         <AnimatedText />
+        <Contador />
+        <br />
+        <br />
+        <br />
+        <br />
         <Button variant="link" className="text-base p-8">
           Contáctame
         </Button>

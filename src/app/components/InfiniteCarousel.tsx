@@ -64,14 +64,14 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
   return (
     <div
       ref={containerRef}
-      className="w-full overflow-hidden"
+      className="w-full overflow-hidden border-zinc-800 border-t"
       style={{ touchAction: "none" }}
     >
       <div ref={sliderRef} className="inline-flex" style={{ gap: `${gap}px` }}>
         {items.map((item) => (
           <div
             key={item.id}
-            className=" rounded-lg shadow-md p-6 min-w-[100px]"
+            className=" rounded-lg shadow-md p-6 pt-4 pb-4 min-w-[100px]"
           >
             {item.content}
           </div>
