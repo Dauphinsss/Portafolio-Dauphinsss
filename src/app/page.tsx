@@ -43,10 +43,6 @@ export default function Home() {
         </p>
         <AnimatedText />
         <Contador />
-        <br />
-        <br />
-        <br />
-        <br />
         <Button variant="link" className="text-base p-8">
           Contáctame
         </Button>
