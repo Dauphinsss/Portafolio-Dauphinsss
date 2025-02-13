@@ -49,7 +49,7 @@ const Contador = () => {
         {formatoVisitas.split("").map((digito, index) => (
           <span
             key={index}
-            className="text-4xlfont-mono bg-zinc-900 p-2 rounded"
+            className="text-3xl sm:text-4xl font-mono bg-zinc-900 p-2 rounded"
           >
             {digito}
           </span>
