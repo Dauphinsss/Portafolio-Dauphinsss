@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Header from "./components/Header";
 import InfiniteCarousel from "./components/InfiniteCarousel";
 import MagicText from "./components/MagicText";
