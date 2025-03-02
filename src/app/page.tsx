@@ -4,6 +4,7 @@ import InfiniteCarousel from "./components/InfiniteCarousel";
 import MagicText from "./components/MagicText";
 import AnimatedText from "./components/Text";
 import Contador from "./components/Contador";
+import About from "./components/About";
 
 export default function Home() {
   const carouselItems = [
@@ -43,9 +44,9 @@ export default function Home() {
         </p>
         <AnimatedText />
         <Contador />
-        <Button variant="link" className="text-base p-8">
-          Contáctame
-        </Button>
+  
+          <About />
+       
       </div>
       <InfiniteCarousel items={carouselItems} />
     </>

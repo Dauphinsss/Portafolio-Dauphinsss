@@ -58,7 +58,7 @@ const Contador = () => {
       <p>¡Felicidades! eres la visita n.° {num}</p>
       <button
         onClick={incrementarVisitas}
-        className="px-6 py-2 bg-zinc-800 text-white rounded hover:bg-zinc-900 transition duration-300"
+        className="px-6 py-2 bg-zinc-800 rounded hover:bg-zinc-900 transition duration-300"
       >
         Incrementar
       </button>
