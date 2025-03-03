@@ -1,9 +1,9 @@
 import Header from "./components/Header";
 import InfiniteCarousel from "./components/InfiniteCarousel";
 import MagicText from "./components/MagicText";
-import AnimatedText from "./components/Text";
 import Contador from "./components/Contador";
 import About from "./components/About";
+import Correo from "./components/Correo";
 
 export default function Home() {
   const carouselItems = [
@@ -41,7 +41,7 @@ export default function Home() {
           oportunidad, yo diseño y desarrrollo paginas web accesibles e
           innovadoras, pasando de tu imaginacion a lo que sera tu sitio web.
         </p>
-        <AnimatedText />
+        <Correo />
         <Contador />
   
           <About />

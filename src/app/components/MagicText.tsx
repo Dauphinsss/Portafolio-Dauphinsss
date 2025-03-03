@@ -92,7 +92,7 @@ const MagicText = () => {
 
   return (
     <div className={` font-semibold ${pressStart2P.className}`}>
-      <div className="text-center desktop-content hero-title text-6xl text-[170px]">
+      <div className="text-center desktop-content hero-title text-6xl text-[150px]">
         Sueños & Ideas <br />
         Se hacen Realiad
         <br />
