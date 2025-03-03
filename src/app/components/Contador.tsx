@@ -44,7 +44,6 @@ const Contador = () => {
     };
   }, []);
 
-
   const animarContador = (valor: number): void => {
     setAnimando(true);
 
@@ -74,7 +73,10 @@ const Contador = () => {
               nuevosDigitos[index] = digito;
 
               // Si este es el último dígito y su última iteración, terminar la animación
-              if (index === digitosFinales.length - 1 && i === iteraciones - 1) {
+              if (
+                index === digitosFinales.length - 1 &&
+                i === iteraciones - 1
+              ) {
                 setAnimando(false);
               }
             }
@@ -96,13 +98,13 @@ const Contador = () => {
 
   return (
     <div className="bg-zinc-950 p-4 rounded-lg shadow-lg text-center grid gap-4 pt-2">
-      <h2 className="text-xl font-bold">¡Bienvenido!</h2>
+      <h2 className="text-xl font-mono">¡Bienvenido!</h2>
       <p>Visitas</p>
       <div className="flex space-x-2 justify-center">
         {digitosMostrados.map((digito, index) => (
           <div
             key={index}
-            className="relative overflow-hidden w-12 h-16 text-3xl sm:text-4xl font-mono bg-zinc-900 rounded flex items-center justify-center"
+            className={`relative overflow-hidden w-9 h-12 sm:w-10 sm:h-14 text-2xl sm:text-3xl md:text-4xl  bg-zinc-900 rounded flex items-center justify-center font-mono`}
           >
             <span
               className={`transition-transform duration-100 ${
@@ -114,11 +116,13 @@ const Contador = () => {
           </div>
         ))}
       </div>
-      <p>¡Felicidades! eres la visita n.° {num}</p>
+      <p className="text-sm sm:text-base md:text-lg">
+        ¡Felicidades! eres la visita n.° {num}
+      </p>
       <button
         onClick={incrementarVisitas}
         disabled={animando}
-        className={`px-6 py-2 rounded transition duration-300 ${
+        className={`px-4 py-2 sm:px-6 sm:py-2 rounded transition duration-300 ${
           animando
             ? "bg-zinc-700 cursor-not-allowed"
             : "bg-zinc-800 hover:bg-zinc-900"

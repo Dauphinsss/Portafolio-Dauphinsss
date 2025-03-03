@@ -12,7 +12,17 @@ export default function Correo() {
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(email);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(email);
+      } else {
+        const textArea = document.createElement("textarea");
+        textArea.value = email;
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+      }
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
@@ -21,14 +31,14 @@ export default function Correo() {
   };
 
   return (
-    <div className="space-y-2 ">
+    <div className="space-y-2 sm:space-y-0 sm:flex sm:items-center sm:justify-between max-w-full">
       <div className="flex items-center space-x-2">
-        <Label className="font-bold">Mi Correo</Label>
+        <Label className="font-bold hidden sm:block">Mi Correo</Label>
         <Input
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex-1 bg-zinc-950 ring-offset-cremita w-64 border-cremita"
+          className="flex-1 bg-zinc-950 ring-offset-cremita w-64 border-cremita text-sm"
           readOnly
         />
         <Button
